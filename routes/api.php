@@ -19,6 +19,7 @@ use App\Http\Controllers\PropertyController;
     return $request->user();
 });*/
 
+Route::get('/properties', [PropertyController::class, 'allProperties']); // Create a new property
 Route::post('/properties', [PropertyController::class, 'createNewProperty']); // Create a new property
 Route::patch('/properties/{id}', [PropertyController::class, 'updateProperty']); // Update a property details
 Route::delete('/properties/{id}', [PropertyController::class, 'destroyProperty']); // Delete a property

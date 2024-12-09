@@ -8,6 +8,10 @@ use Illuminate\Support\Facades\Validator;
 
 class PropertyController extends Controller
 {
+
+    public function allProperties(){
+        return properties::all();
+    }
     //
     /**
      * This creates and saves new property.
